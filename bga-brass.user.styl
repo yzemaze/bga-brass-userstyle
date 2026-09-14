@@ -1,0 +1,44 @@
+/* ==UserStyle==
+@name						BGA Brass userstyle
+@description		Improvements for BGA’s Brass UI. Tested with Lancashire only.
+@version				0.1.13
+@author					yzemaze
+@namespace			github.com/yzemaze/
+@homepageURL		https://github.com/yzemaze/bga-brass-userstyle
+@supportURL			https://github.com/yzemaze/bga-brass-userstyle/issues
+@updateURL			https://github.com/yzemaze/bga-brass-userstyle/raw/main/brass.user.styl
+@namespace			github.com/yzemaze/
+@license				GPLv3
+@preprocessor		stylus
+
+@var				range	levelZoom	'Tile level zoom'	[200,100,300,10,"%"]
+@var				range	vpZoom	'Tile VP zoom'	[150,100,300,10,"%"]
+@var				range	vpLeft	'Tile VP position left'	[5,0,15,1,"px"]
+@var    		select  vpFontFamily	'Tile VP font family'	["initial", "monospace", "proportional", "sans-serif", "serif", "Garamond*", "Arial", "Roboto", "Verdana"]
+@var				range	vpFontSize	'Tile VP font size'	[20,14,24,1,"px"]
+@var				range	vpLineHeight	'Tile VP line height'	[25,10,32,1,"px"]
+@var				range	cubeHeight	'Size of coal/iron cubes'	[25,20,30,1,"px"]
+
+==/UserStyle== */
+
+@-moz-document regexp("https://(\w*\.)?boardgamearena.com/.*/brass.*"), regexp("https://(\w*\.)?boardgamearena.com/archive/replay/.*")
+	.bgagame-brasslancashire, .bgagame-brassbirmingham, .bgagame-pittsburgh
+		#brass-board-industries .brass-tile .brass-tile-holder .brass-tile-inner 
+			.tile-level
+				left 5px
+				top 2px
+				zoom levelZoom
+				z-index 1
+				div
+					margin unset
+			.tile-points
+				bottom 0px
+				left vpLeft
+				top unset
+				line-height vpLineHeight
+				font-family vpFontFamily
+				font-size vpFontSize
+				zoom vpZoom
+				z-index 1
+		.brass-meeple.icon-coal, .brass-meeple.icon-iron
+			height cubeHeight
