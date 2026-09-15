@@ -6,6 +6,7 @@ Configurable aspects of industry tiles on the board:
 - Zoom for tile level and VP icons
 - VP icons font
 - Coal/iron cube size
+- Zoom and move player mat overview
 
 ## Prerequisites
 <a href="https://github.com/openstyles/stylus#readme">Stylus</a> or some other way to apply a .user.styl or css to websites.
