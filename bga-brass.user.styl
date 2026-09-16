@@ -1,7 +1,7 @@
 /* ==UserStyle==
-@name				BGA Brass improvements
-@description		Improvements for BGA’s Brass UI. Tested with Lancashire only.
-@version			0.1.15
+@name				BGA Brass mods
+@description		Tweak BGA’s Brass UI to your needs. Tested with Lancashire only.
+@version			0.3.8
 @author				yzemaze
 @namespace			github.com/yzemaze/
 @homepageURL		https://github.com/yzemaze/bga-brass-userstyle
@@ -11,39 +11,71 @@
 @license			GPLv3
 @preprocessor		stylus
 
-@var				range	levelZoom	'Tile level zoom'	[200,100,300,10,"%"]
-@var				range	vpZoom	'Tile VP zoom'	[150,100,300,10,"%"]
-@var				range	vpLeft	'Tile VP position left'	[5,0,15,1,"px"]
-@var    		select  vpFontFamily	'Tile VP font family'	["initial", "monospace", "proportional", "sans-serif", "serif", "Garamond*", "Arial", "Roboto", "Verdana"]
-@var				range	vpFontSize	'Tile VP font size'	[20,14,24,1,"px"]
-@var				range	vpLineHeight	'Tile VP line height'	[25,10,32,1,"px"]
-@var				range	cubeHeight	'Size of coal/iron cubes'	[25,20,30,1,"px"]
-@var				range	pmZoom	'Player mat overview zoom'	[100,50,150,5,"%"]
-@var				range	pmLeft	'Player mat overview position'	[50,0,100,2,"%"]
+@var	range	levelZoom	'Industry tiles: level zoom'	[200,100,300,10,"%"]
+@var	range	levelZoom	'–– Industry tiles: level zoom'	[200,100,300,10,"%"]
+@var	range	cubeHeight	'coal/iron cubes'	[25,20,30,1,"px"]
+@var	range	vpZoom	'vp zoom'	[150,100,300,10,"%"]
+@var	range	vpLeft	'vp position left'	[5,0,15,1,"px"]
+@var	select  vpFontFamily	'vp font family'	["initial", "monospace", "proportional", "sans-serif", "serif", "Garamond*", "Arial", "Roboto", "Verdana"]
+@var	range	vpFontSize	'vp font size'	[20,14,24,1,"px"]
+@var	range	vpLineHeight	'vp line height'	[25,10,32,1,"px"]
+@var	range	flippedTilesBrightness	'flipped tiles brightness'	[100,0,100,5,"%"]
+@var	range	usedLocationCards	'used location cards'	[10,10,20,1,"px"]
+@var	range	boardBrightness	'–– Board background: brightness'	[100,0,100,5,"%"]
+@var	color	bgColor	'hide bg image / color'	transparent
+@var	checkbox	hideBorderImage 'hide border image'	0
+@var	range	pmZoom	'–– Player mat overview: zoom'	[100,50,150,5,"%"]
+@var	range	pmLeft	'position'	[50,0,100,2,"%"]
+@var	range	pmLevelZoom	'industry tiles: level zoom'	[200,100,300,10,"%"]
+@var	range	pmDotSize	'count dots'	[8,8,20,2,"px"]
 
 ==/UserStyle== */
 
 @-moz-document regexp("https://(\w*\.)?boardgamearena.com/.*/brass.*"), regexp("https://(\w*\.)?boardgamearena.com/archive/replay/.*")
 	.bgagame-brasslancashire, .bgagame-brassbirmingham, .bgagame-pittsburgh
-		#brass-board-industries .brass-tile .brass-tile-holder .brass-tile-inner 
-			.tile-level
-				left 5px
-				top 2px
-				zoom levelZoom
-				z-index 1
-				div
-					margin unset
-			.tile-points
-				bottom 0px
-				left vpLeft
-				top unset
-				line-height vpLineHeight
-				font-family vpFontFamily
-				font-size vpFontSize
-				zoom vpZoom
-				z-index 1
-		.brass-meeple.icon-coal, .brass-meeple.icon-iron
-			height cubeHeight
-		#brass-main-container #player-mat-overview
-			left unquote('calc(' + pmLeft + ' - 502px)')
-			zoom pmZoom
+		#brass-board-industries .brass-tile .brass-tile-holder 
+			.brass-tile-inner 
+				.tile-level
+					left 5px
+					top 2px
+					zoom levelZoom
+					z-index 1
+					div
+						margin unset
+				.tile-points
+					bottom 0px
+					left vpLeft
+					top unset
+					line-height vpLineHeight
+					font-family vpFontFamily
+					font-size vpFontSize
+					zoom vpZoom
+					z-index 1
+				.brass-tile-back
+					filter: brightness(flippedTilesBrightness);
+			.brass-meeple.icon-coal, .brass-meeple.icon-iron
+				height cubeHeight
+		#brass-main-wrapper #brass-main-container 
+			#brass-board-wrapper #brass-board-holder 
+				#brass-board-background
+					filter brightness(boardBrightness)
+					if bgColor != transparent
+						background-image none
+						background-color bgColor
+				.brass-banner
+					z-index 1
+					.used-location-dot
+						width usedLocationCards !important
+			#player-mat-overview
+				left unquote('calc(' + pmLeft + ' - 502px)')
+				zoom pmZoom
+				.tile-level:not(#tile-overview-shipyard-0-0 *):not(#tile-overview-shipyard-0-1 *)
+					left 5px
+					top 2px
+					zoom pmLevelZoom
+					z-index 1
+				.overview-entry-count-dot
+					width pmDotSize
+	if hideBorderImage
+		#brass-main-wrapper #brass-main-container::before
+			border-image unset
