@@ -22,7 +22,7 @@ Userstyle for Brass on BGA to tweak the UI to your needs.
 - Used location cards’ size
 
 ## Just show me …
-![screenshot-board](/img/screenshot-fullHDboard.png?raw=true)
+![screenshot-fullHD](/img/screenshot-fullHD.png?raw=true)
 
 FullHD with these config options:
 ![screenshot-config0](/img/screenshot-config0.png?raw=true) ![screenshot-config1](/img/screenshot-config1.png?raw=true)
