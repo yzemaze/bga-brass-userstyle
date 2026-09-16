@@ -22,10 +22,10 @@ Userstyle for Brass on BGA to tweak the UI to your needs.
 - Used location cards’ size
 
 ## Just show me …
-![screenshot-fullHD](/img/screenshot-fullHD.png?raw=true)
+![screenshot-fullHD](/img/screenshot_fullHD.png?raw=true)
 
 FullHD with these config options:
-![screenshot-config0](/img/screenshot-config0.png?raw=true) ![screenshot-config1](/img/screenshot-config1.png?raw=true)
+![screenshot-config0](/img/screenshot_config0.png?raw=true) ![screenshot-config1](/img/screenshot_config1.png?raw=true)
 
 ## Prerequisites
 <a href="https://github.com/openstyles/stylus#readme">Stylus</a> or some other way to apply a .user.styl or css to websites.
