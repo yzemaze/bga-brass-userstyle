@@ -25,6 +25,7 @@ Userstyle for Brass on BGA to tweak the UI to your needs.
 ![screenshot-fullHD](/img/screenshot_fullHD.png?raw=true)
 
 FullHD with these config options:
+
 ![screenshot-config0](/img/screenshot_config0.png?raw=true) ![screenshot-config1](/img/screenshot_config1.png?raw=true)
 
 ## Prerequisites
