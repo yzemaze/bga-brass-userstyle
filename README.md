@@ -5,9 +5,8 @@ Userstyle for Brass on BGA to tweak the UI to your needs.
 
 ### Main board
 - Background brightness
-- Exchange mainboard for plain background
-- Hide border image
-- Used location cards’ size
+- Plain background
+- Hide border image ("lacework")
 
 ### Player mat overview
 - Zoom
@@ -15,11 +14,12 @@ Userstyle for Brass on BGA to tweak the UI to your needs.
 - Tile level zoom
 - Count dots’ size
 
-### Industry tiles on the board
+### Locations / Industry tiles
 - Zoom for tile level and VP icons
 - VP icons’ font details
 - Coal/iron cubes’ size
 - Flipped tiles’ brightness
+- Used location cards’ size
 
 ## Prerequisites
 <a href="https://github.com/openstyles/stylus#readme">Stylus</a> or some other way to apply a .user.styl or css to websites.
