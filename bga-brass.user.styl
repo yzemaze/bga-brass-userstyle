@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name				BGA Brass mods
 @description		Tweak BGA’s Brass UI to your needs. Tested with Lancashire only.
-@version			0.3.9
+@version			0.4.3
 @author				yzemaze
 @namespace			github.com/yzemaze/
 @homepageURL		https://github.com/yzemaze/bga-brass-userstyle
@@ -25,7 +25,10 @@
 @var	color	bgColor	'hide bg image / color'	transparent
 @var	checkbox	hideBorderImage 'hide border image'	0
 @var	range	pmZoom	'–– Player mat overview: zoom'	[100,1,150,1,"%"]
-@var	range	pmLeft	'position'	[50,0,100,1,"%"]
+@var	range	pmLeft	'position left'	[50,0,120,1,"%"]
+@var	range	pmTop	'position top'	[-1,-5,100,1,"%"]
+@var	checkbox	pmVertical	'Vertical'	0
+@var	color	pmBgColor	'… bg color'	transparent
 @var	range	pmLevelZoom	'industry tiles: level zoom'	[200,100,300,10,"%"]
 @var	range	pmDotSize	'count dots'	[8,8,20,2,"px"]
 
@@ -67,7 +70,20 @@
 					.used-location-dot
 						width usedLocationCards !important
 			#player-mat-overview
+				if pmVertical
+					background-image unset
+					background-color pmBgColor
+					border-radius 1em
+					display flex
+					flex-direction column
+					padding 0 0 1.5em 1em
+					width unset
+					&:hover
+						cursor zoom-in
+					.overview-entry .overview-entry-next
+						display none
 				left unquote('calc(' + pmLeft + ' - 502px)')
+				top pmTop
 				zoom pmZoom
 				.tile-level:not(#tile-overview-shipyard-0-0 *):not(#tile-overview-shipyard-0-1 *)
 					left 5px

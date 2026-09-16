@@ -13,6 +13,7 @@ Userstyle for Brass on BGA to tweak the UI to your needs.
 - Position
 - Tile level zoom
 - Count dots’ size
+- vertical orientation (+ plain colored background if you need it)
 
 ### Locations / Industry tiles
 - Zoom for tile level and VP icons
