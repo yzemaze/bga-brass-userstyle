@@ -9,7 +9,7 @@ Userstyle for Brass on BGA to tweak the UI to your needs.
 - Hide border image ("lacework")
 
 ### Player mat overview
-- Zoom
+- Zoom (1% to almost hide it completely)
 - Position
 - Tile level zoom
 - Count dots’ size
