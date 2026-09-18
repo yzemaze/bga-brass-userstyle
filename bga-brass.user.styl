@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name				BGA Brass mods
 @description		Tweak BGA’s Brass UI to your needs. Tested with Lancashire only.
-@version			0.4.4
+@version			0.5.3
 @author				yzemaze
 @namespace			github.com/yzemaze/
 @homepageURL		https://github.com/yzemaze/bga-brass-userstyle
@@ -11,7 +11,8 @@
 @license			GPLv3
 @preprocessor		stylus
 
-@var	range	levelZoom	'–– Industry tiles: level zoom'	[150,100,200,10,"%"]
+@var	range	levelZoom	'Industry tiles: level zoom'	[200,100,300,10,"%"]
+@var	range	levelZoom	'–– Industry tiles: level zoom'	[200,100,300,10,"%"]
 @var	range	cubeHeight	'coal/iron cubes'	[25,20,30,1,"px"]
 @var	range	vpZoom	'vp zoom'	[150,100,300,10,"%"]
 @var	range	vpLeft	'vp position left'	[5,0,15,1,"px"]
@@ -21,8 +22,9 @@
 @var	range	flippedTilesBrightness	'flipped tiles brightness'	[100,0,100,5,"%"]
 @var	range	usedLocationCards	'used location cards'	[10,10,20,1,"px"]
 @var	range	boardBrightness	'–– Board background: brightness'	[100,0,100,5,"%"]
-@var	color	bgColor	'hide bg image / color'	transparent
+@var	color	bgColor	'bg color (hide image)'	transparent
 @var	checkbox	hideBorderImage 'hide border image'	0
+@var	checkbox	rotateBoard	'rotate board 90°'	0
 @var	range	pmZoom	'–– Player mat overview: zoom'	[100,1,150,1,"%"]
 @var	range	pmLeft	'position left'	[50,0,120,1,"%"]
 @var	range	pmTop	'position top'	[-1,-5,100,1,"%"]
@@ -94,3 +96,36 @@
 	if hideBorderImage
 		#brass-main-wrapper #brass-main-container::before
 			border-image unset
+	if rotateBoard
+		#brass-board-wrapper
+			transform rotate(90deg)
+		.industry-slot, .board-distant-market
+			transform rotate(-90deg)
+		#banner-Birkenhead, #banner-Fleetwood
+			transform rotate(-90deg) translate(65px, -65px)
+		#banner-EllesmerePort
+			transform rotate(-90deg) translate(65px, 65px)
+		#banner-WarringtonRuncorn, #banner-Lancaster, #banner-Oldham, #banner-Rochdale
+			transform rotate(-90deg) translate(65px, 115px)
+		#banner-Wigan
+			transform rotate(-90deg) translate(115px, 65px)
+		#banner-Liverpool
+			transform rotate(-90deg) translate(115px, 105px)
+		#banner-Manchester
+			transform rotate(-90deg) translate(120px, 115px)
+		#banner-Bolton, #banner-Preston
+			transform rotate(-90deg) translate(160px, 115px)
+		#banner-Macclesfield, #banner-Stockport, #banner-BarrowInFurness
+			transform rotate(-90deg) translate(-65px, 115px)
+		#banner-Colne 
+			transform rotate(-90deg) translate(-115px, -65px)
+		#banner-Bury
+			transform rotate(-90deg) translate(-135px, 65px)
+		#banner-Burnley
+			transform rotate(-90deg) translate(-165px, 65px)
+		#banner-Blackburn
+			transform rotate(-90deg) translate(-165px, 115px)
+		#distant-blackpool
+			transform rotate(-90deg) translate(10px, -40px)
+		#distant-southport
+			transform rotate(-90deg) translate(15px, 20px)

@@ -7,13 +7,14 @@ Userstyle for Brass on BGA to tweak the UI to your needs.
 - Background brightness
 - Plain background
 - Hide border image ("lacework")
+- Rotate by 90° (landscape)
 
 ### Player mat overview
 - Zoom (1% to almost hide it completely)
 - Position
 - Tile level zoom
 - Count dots’ size
-- vertical orientation (+ plain colored background if you need it)
+- Vertical orientation (+ plain colored background if you need it)
 
 ### Locations / Industry tiles
 - Zoom for tile level and VP icons
