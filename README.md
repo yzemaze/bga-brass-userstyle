@@ -35,12 +35,15 @@ Install <a href="https://github.com/openstyles/stylus#readme">Stylus</a> from <a
 
 ## Install & Usage
 Open [bga-brass.user.styl](https://github.com/yzemaze/bga-brass-userstyle/raw/main/bga-brass.user.styl) and hit Stylus’ install button.
+
 ![screenshot-install](/img/screenshot_install.png?raw=true)
 
 Open the config dialog within Stylus …
+
 ![screenshot-open-config](/img/screenshot_open_config.png?raw=true)
 
 … and change the settings to your preferences.
+
 ![screenshot-config-full](/img/screenshot_config_full.png?raw=true)
 
 ## Notes
