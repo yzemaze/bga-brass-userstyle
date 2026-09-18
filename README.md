@@ -31,11 +31,17 @@ FullHD with these config options:
 ![screenshot-config0](/img/screenshot_config0.png?raw=true) ![screenshot-config1](/img/screenshot_config1.png?raw=true)
 
 ## Prerequisites
-<a href="https://github.com/openstyles/stylus#readme">Stylus</a> or some other way to apply a .user.styl or css to websites.
+Install <a href="https://github.com/openstyles/stylus#readme">Stylus</a> from <a href="https://addons.mozilla.org/firefox/addon/styl-us/">Mozilla addons</a> or <a href="https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne">Chrome Web Store</a>. (There are other ways to apply a .user.styl or CSS to websites, but that’s beyond the scope here.)
 
 ## Install & Usage
 Open [bga-brass.user.styl](https://github.com/yzemaze/bga-brass-userstyle/raw/main/bga-brass.user.styl) and hit Stylus’ install button.
-Open the config dialog within Stylus and change the settings to your preferences.
+![screenshot-install](/img/screenshot_install.png?raw=true)
+
+Open the config dialog within Stylus …
+![screenshot-open-config](/img/screenshot_open_config.png?raw=true)
+
+… and change the settings to your preferences.
+![screenshot-config-full](/img/screenshot_config_full.png?raw=true)
 
 ## Notes
 Tested with Lancashire. It should work fine with Birmingham as well.
